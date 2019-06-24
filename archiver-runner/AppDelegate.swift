@@ -85,7 +85,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         NSLog("Started")
-        self.textOutput?.insertText("butts")
+        // self.textOutput?.textStorage?.defaultParagraphStyle.default
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
