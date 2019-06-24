@@ -54,20 +54,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
             stdout.fileHandleForReading.readabilityHandler = { pipe in
                 if let line = String(data: pipe.availableData, encoding: String.Encoding.utf8) {
-                    DispatchQueue.main.async {
-                        self.textOutput?.textStorage?.mutableString.append(line)
-                        print("output \(line)")
-                    }
+                    self.appendOutput(output: line)
                 } else {
                     print("Error decoding data: \(pipe.availableData)")
                 }
             }
             stderr.fileHandleForReading.readabilityHandler = { pipe in
                 if let line = String(data: pipe.availableData, encoding: String.Encoding.utf8) {
-                    DispatchQueue.main.async {
-                        self.textOutput?.textStorage?.mutableString.append(line)
-                        print("error \(line)")
-                    }
+                    self.appendOutput(output: line)
                 } else {
                     print("Error decoding data: \(pipe.availableData)")
                 }
@@ -85,6 +79,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         NSLog("Started")
+        appendOutput(output: "Started archiver ui!")
         // self.textOutput?.textStorage?.defaultParagraphStyle.default
     }
 
@@ -98,6 +93,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         task.arguments = []
         
         return task
+    }
+    
+    fileprivate func appendOutput(output: String) {
+        DispatchQueue.main.async {
+            self.textOutput?.textStorage?.mutableString.append(output)
+            self.textOutput?.textStorage?.mutableString.append("\n")
+        }
     }
 }
 
