@@ -22,6 +22,7 @@ var executableURL = URL(fileURLWithPath: "/Users/richo/code/ext/archiver/target/
 class AppDelegate: NSObject, NSApplicationDelegate {
     var child: Process?
     var state: RunState = RunState.Stopped
+    var aggregatedOutput: NSMutableAttributedString?
     
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var buttan: NSButton!
@@ -79,7 +80,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         NSLog("Started")
-        appendOutput(output: "Started archiver ui!")
+        self.aggregatedOutput = NSMutableAttributedString.init()
+        appendOutput(output: "Started archiver ui!\n")
         // self.textOutput?.textStorage?.defaultParagraphStyle.default
     }
 
@@ -97,9 +99,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     fileprivate func appendOutput(output: String) {
         DispatchQueue.main.async {
-            self.textOutput?.textStorage?.mutableString.append(output)
-            self.textOutput?.textStorage?.mutableString.append("\n")
+            let attrs = [ NSAttributedString.Key.foregroundColor: NSColor.white ]
+            let attrString = NSAttributedString(string: output, attributes: attrs)
+            self.aggregatedOutput?.append(attrString)
+            self.textOutput?.textStorage?.setAttributedString(self.aggregatedOutput!)
+            // self.textOutput?.textStorage?.mutableString.append("\n")
         }
     }
 }
+
 
