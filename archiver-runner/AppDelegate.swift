@@ -51,6 +51,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBAction func stopStartButton(_ sender: Any) {
         switch state {
         case .Stopped:
+            clearOutput()
             if self.configFile == nil {
                 maybeSetConfig()
             }
@@ -132,6 +133,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             self.aggregatedOutput?.append(attrString)
             self.textOutput?.textStorage?.setAttributedString(self.aggregatedOutput!)
             // self.textOutput?.textStorage?.mutableString.append("\n")
+        }
+    }
+    
+    fileprivate func clearOutput() {
+        DispatchQueue.main.async {
+            self.aggregatedOutput = NSMutableAttributedString.init()
+            self.textOutput?.textStorage?.setAttributedString(self.aggregatedOutput!)
         }
     }
 }
