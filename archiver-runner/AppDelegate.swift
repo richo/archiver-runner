@@ -23,15 +23,43 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var child: Process?
     var state: RunState = RunState.Stopped
     var aggregatedOutput: NSMutableAttributedString?
+    var configFile: URL?
     
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var buttan: NSButton!
     
+    fileprivate func maybeSetConfig() {
+        let dialog = NSOpenPanel();
+        
+        dialog.title                   = "Open archiver confiig";
+        dialog.showsResizeIndicator    = true;
+        dialog.showsHiddenFiles        = false;
+        dialog.canChooseDirectories    = true;
+        dialog.canCreateDirectories    = true;
+        dialog.allowsMultipleSelection = false;
+        dialog.allowedFileTypes        = ["toml"];
+        
+        if (dialog.runModal() == NSApplication.ModalResponse.OK) {
+            self.configFile = dialog.url // Pathname of the file
+        }
+    }
+    
+    @IBAction func openConfig(_ sender: Any) {
+        maybeSetConfig()
+    }
+    
     @IBAction func stopStartButton(_ sender: Any) {
         switch state {
         case .Stopped:
-            child = createProcess()
+            if self.configFile == nil {
+                maybeSetConfig()
+            }
+            // After one attempt we'll just bail.
+            if self.configFile == nil {
+                return
+            }
             
+            child = createProcess()
 
             let stdout = Pipe()
             let stderr = Pipe()
@@ -92,7 +120,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     fileprivate func createProcess() -> Process {
         let task = Process()
         task.executableURL = executableURL
-        task.arguments = []
+        task.arguments = ["--config", self.configFile!.path]
         
         return task
     }
