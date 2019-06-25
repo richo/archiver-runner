@@ -71,6 +71,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             child?.terminationHandler = { process in
                 stdout.fileHandleForReading.readabilityHandler = nil
                 stderr.fileHandleForReading.readabilityHandler = nil
+                self.setRunState(state: .Stopped)
 
                 // TODO(richo) Deal with resetting the ui.
             }
@@ -97,11 +98,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 }
             }
             
-            buttan.title = "Stop"
-            state = .Running
+            setRunState(state: .Running)
         case .Running:
-            buttan.title = "Start"
-            state = .Stopped
+            setRunState(state: .Stopped)
         }
         
     }
@@ -141,6 +140,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             self.aggregatedOutput = NSMutableAttributedString.init()
             self.textOutput?.textStorage?.setAttributedString(self.aggregatedOutput!)
         }
+    }
+    
+    fileprivate func setRunState(state: RunState) {
+        DispatchQueue.main.async {
+        switch state {
+            case .Stopped:
+                self.buttan.title = "Start"
+            case .Running:
+                self.buttan.title = "Stop"
+            }
+        }
+        self.state = state
     }
 }
 
