@@ -12,6 +12,10 @@
 		7BAF922122BACE8F00A94910 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BAF921F22BACE8F00A94910 /* MainMenu.xib */; };
 		7BAF922D22BACE8F00A94910 /* archiver_runnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAF922C22BACE8F00A94910 /* archiver_runnerTests.swift */; };
 		7BAF923822BACE8F00A94910 /* archiver_runnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAF923722BACE8F00A94910 /* archiver_runnerUITests.swift */; };
+		7BB8479822C2958800C21C64 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB8479722C2958800C21C64 /* Security.framework */; };
+		7BB8479A22C295AC00C21C64 /* libusb-1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB8479922C295AC00C21C64 /* libusb-1.0.0.dylib */; };
+		7BB8479B22C345B100C21C64 /* libusb-1.0.0.dylib in Resources */ = {isa = PBXBuildFile; fileRef = 7BB8479922C295AC00C21C64 /* libusb-1.0.0.dylib */; };
+		7BB8479D22C345D100C21C64 /* runner in Resources */ = {isa = PBXBuildFile; fileRef = 7BB8479C22C345D100C21C64 /* runner */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,9 @@
 		7BAF923322BACE8F00A94910 /* archiver-runnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "archiver-runnerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BAF923722BACE8F00A94910 /* archiver_runnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = archiver_runnerUITests.swift; sourceTree = "<group>"; };
 		7BAF923922BACE8F00A94910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BB8479722C2958800C21C64 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		7BB8479922C295AC00C21C64 /* libusb-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libusb-1.0.0.dylib"; path = "../../../../../usr/local/Cellar/libusb/1.0.22/lib/libusb-1.0.0.dylib"; sourceTree = "<group>"; };
+		7BB8479C22C345D100C21C64 /* runner */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = runner; path = archiver/target/release/runner; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BB8479822C2958800C21C64 /* Security.framework in Frameworks */,
+				7BB8479A22C295AC00C21C64 /* libusb-1.0.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,10 +83,12 @@
 		7BAF920F22BACE8F00A94910 = {
 			isa = PBXGroup;
 			children = (
+				7BB8479C22C345D100C21C64 /* runner */,
 				7BAF921A22BACE8F00A94910 /* archiver-runner */,
 				7BAF922B22BACE8F00A94910 /* archiver-runnerTests */,
 				7BAF923622BACE8F00A94910 /* archiver-runnerUITests */,
 				7BAF921922BACE8F00A94910 /* Products */,
+				7BB8479622C2958800C21C64 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +132,15 @@
 			path = "archiver-runnerUITests";
 			sourceTree = "<group>";
 		};
+		7BB8479622C2958800C21C64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BB8479922C295AC00C21C64 /* libusb-1.0.0.dylib */,
+				7BB8479722C2958800C21C64 /* Security.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,6 +150,7 @@
 			buildPhases = (
 				7BAF921422BACE8F00A94910 /* Sources */,
 				7BAF921522BACE8F00A94910 /* Frameworks */,
+				7BB8479522C1D34F00C21C64 /* Build archiver */,
 				7BAF921622BACE8F00A94910 /* Resources */,
 			);
 			buildRules = (
@@ -225,6 +246,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BB8479D22C345D100C21C64 /* runner in Resources */,
+				7BB8479B22C345B100C21C64 /* libusb-1.0.0.dylib in Resources */,
 				7BAF921E22BACE8F00A94910 /* Assets.xcassets in Resources */,
 				7BAF922122BACE8F00A94910 /* MainMenu.xib in Resources */,
 			);
@@ -245,6 +268,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7BB8479522C1D34F00C21C64 /* Build archiver */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build archiver";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/target/package/archiver-0.1.0",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "exit 0\n\nARCHIVER_VERSION=\"0.1.0\"\nLIBUSB_PATH=\"/usr/local/opt/libusb/lib/libusb-1.0.0.dylib\"\n\nls\n\nif [ ! -d archiver ]; then\n    git clone git://github.com/richo/archiver.git\nfi\nif [ ! -f $LIBUSB_PATH ]; then\n    echo \"error: Build system requires libusb. try `brew install libusb`\"\n    exit 1\nfi\n\ncd archiver\ngit fetch\ngit merge --ff-only origin/master\n/Users/${USER}/.cargo/bin/cargo build --release\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7BAF921422BACE8F00A94910 /* Sources */ = {
@@ -426,6 +471,10 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/libusb/1.0.22/lib,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "psych0tik.net.archiver-runner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -444,6 +493,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/libusb/1.0.22/lib,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "psych0tik.net.archiver-runner";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -15,8 +15,9 @@ enum RunState {
     case Running
     case Stopped
 }
-// TODO(richo) something something resources something something build step
-var executableURL = URL(fileURLWithPath: "/Users/richo/code/ext/archiver/target/debug/runner")
+
+var mainBundle = Bundle.main
+var executableURL = mainBundle.url(forResource: "runner", withExtension: nil)
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
