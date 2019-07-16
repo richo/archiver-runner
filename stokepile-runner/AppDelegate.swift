@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  archiver-runner
+//  stokepile-runner
 //
 //  Created by richö butts on 6/19/19.
 //  Copyright © 2019 richö butts. All rights reserved.
@@ -25,30 +25,30 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var state: RunState = RunState.Stopped
     var aggregatedOutput: NSMutableAttributedString?
     var configFile: URL?
-    
+
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var buttan: NSButton!
-    
+
     fileprivate func maybeSetConfig() {
         let dialog = NSOpenPanel();
-        
-        dialog.title                   = "Open archiver confiig";
+
+        dialog.title                   = "Open stokepile confiig";
         dialog.showsResizeIndicator    = true;
         dialog.showsHiddenFiles        = false;
         dialog.canChooseDirectories    = true;
         dialog.canCreateDirectories    = true;
         dialog.allowsMultipleSelection = false;
         dialog.allowedFileTypes        = ["toml"];
-        
+
         if (dialog.runModal() == NSApplication.ModalResponse.OK) {
             self.configFile = dialog.url // Pathname of the file
         }
     }
-    
+
     @IBAction func openConfig(_ sender: Any) {
         maybeSetConfig()
     }
-    
+
     @IBAction func stopStartButton(_ sender: Any) {
         switch state {
         case .Stopped:
@@ -60,7 +60,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             if self.configFile == nil {
                 return
             }
-            
+
             child = createProcess()
 
             let stdout = Pipe()
@@ -76,9 +76,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
                 // TODO(richo) Deal with resetting the ui.
             }
-            
 
-            
+
+
             do {
                 try child?.run()
             } catch {
@@ -98,21 +98,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     print("Error decoding data: \(pipe.availableData)")
                 }
             }
-            
+
             setRunState(state: .Running)
         case .Running:
             setRunState(state: .Stopped)
         }
-        
+
     }
     @IBOutlet var textOutput: NSTextView!
-    
+
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         NSLog("Started")
         self.aggregatedOutput = NSMutableAttributedString.init()
-        appendOutput(output: "Started archiver ui!\n")
-        appendOutput(output: "archiver version: ")
-        appendOutput(output: getArchiverVersion())
+        appendOutput(output: "Started stokepile ui!\n")
+        appendOutput(output: "stokepile version: ")
+        appendOutput(output: getStokepileVersion())
         appendOutput(output: "\n")
 
         // self.textOutput?.textStorage?.defaultParagraphStyle.default
@@ -121,15 +121,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_ aNotification: Notification) {
         NSLog("Bye")
     }
-    
+
     fileprivate func createProcess() -> Process {
         let task = Process()
         task.executableURL = executableURL
         task.arguments = ["--config", self.configFile!.path]
-        
+
         return task
     }
-    
+
     fileprivate func appendOutput(output: String) {
         DispatchQueue.main.async {
             let attrs = [ NSAttributedString.Key.foregroundColor: NSColor.white ]
@@ -139,14 +139,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             // self.textOutput?.textStorage?.mutableString.append("\n")
         }
     }
-    
+
     fileprivate func clearOutput() {
         DispatchQueue.main.async {
             self.aggregatedOutput = NSMutableAttributedString.init()
             self.textOutput?.textStorage?.setAttributedString(self.aggregatedOutput!)
         }
     }
-    
+
     fileprivate func setRunState(state: RunState) {
         DispatchQueue.main.async {
         switch state {
@@ -158,22 +158,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         self.state = state
     }
-    
-    func getArchiverVersion() -> String {
+
+    func getStokepileVersion() -> String {
         let task = Process()
         task.executableURL = executableURL
         task.arguments = ["--version"]
-        
+
         let stdout = Pipe()
-        
+
         task.standardOutput = stdout
         do {
             try task.run()
         } catch {
-            return "Couldn't run archiver to fetch version"
+            return "Couldn't run stokepile to fetch version"
         }
         task.waitUntilExit()
-        
+
         let data = stdout.fileHandleForReading.readDataToEndOfFile()
         let output = String(decoding: data, as: UTF8.self)
         return output

@@ -10,8 +10,8 @@
 		7BAF921C22BACE8F00A94910 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAF921B22BACE8F00A94910 /* AppDelegate.swift */; };
 		7BAF921E22BACE8F00A94910 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BAF921D22BACE8F00A94910 /* Assets.xcassets */; };
 		7BAF922122BACE8F00A94910 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BAF921F22BACE8F00A94910 /* MainMenu.xib */; };
-		7BAF922D22BACE8F00A94910 /* archiver_runnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAF922C22BACE8F00A94910 /* archiver_runnerTests.swift */; };
-		7BAF923822BACE8F00A94910 /* archiver_runnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAF923722BACE8F00A94910 /* archiver_runnerUITests.swift */; };
+		7BAF922D22BACE8F00A94910 /* stokepile_runnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAF922C22BACE8F00A94910 /* stokepile_runnerTests.swift */; };
+		7BAF923822BACE8F00A94910 /* stokepile_runnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAF923722BACE8F00A94910 /* stokepile_runnerUITests.swift */; };
 		7BB8479822C2958800C21C64 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB8479722C2958800C21C64 /* Security.framework */; };
 		7BB8479A22C295AC00C21C64 /* libusb-1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB8479922C295AC00C21C64 /* libusb-1.0.0.dylib */; };
 		7BB8479B22C345B100C21C64 /* libusb-1.0.0.dylib in Resources */ = {isa = PBXBuildFile; fileRef = 7BB8479922C295AC00C21C64 /* libusb-1.0.0.dylib */; };
@@ -24,33 +24,33 @@
 			containerPortal = 7BAF921022BACE8F00A94910 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7BAF921722BACE8F00A94910;
-			remoteInfo = "archiver-runner";
+			remoteInfo = "stokepile-runner";
 		};
 		7BAF923422BACE8F00A94910 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7BAF921022BACE8F00A94910 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7BAF921722BACE8F00A94910;
-			remoteInfo = "archiver-runner";
+			remoteInfo = "stokepile-runner";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7BAF921822BACE8F00A94910 /* archiver-runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "archiver-runner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BAF921822BACE8F00A94910 /* stokepile-runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "stokepile-runner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BAF921B22BACE8F00A94910 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BAF921D22BACE8F00A94910 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BAF922022BACE8F00A94910 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		7BAF922222BACE8F00A94910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7BAF922322BACE8F00A94910 /* archiver_runner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = archiver_runner.entitlements; sourceTree = "<group>"; };
-		7BAF922822BACE8F00A94910 /* archiver-runnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "archiver-runnerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BAF922C22BACE8F00A94910 /* archiver_runnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = archiver_runnerTests.swift; sourceTree = "<group>"; };
+		7BAF922322BACE8F00A94910 /* stokepile_runner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = stokepile_runner.entitlements; sourceTree = "<group>"; };
+		7BAF922822BACE8F00A94910 /* stokepile-runnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "stokepile-runnerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BAF922C22BACE8F00A94910 /* stokepile_runnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stokepile_runnerTests.swift; sourceTree = "<group>"; };
 		7BAF922E22BACE8F00A94910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7BAF923322BACE8F00A94910 /* archiver-runnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "archiver-runnerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BAF923722BACE8F00A94910 /* archiver_runnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = archiver_runnerUITests.swift; sourceTree = "<group>"; };
+		7BAF923322BACE8F00A94910 /* stokepile-runnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "stokepile-runnerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BAF923722BACE8F00A94910 /* stokepile_runnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stokepile_runnerUITests.swift; sourceTree = "<group>"; };
 		7BAF923922BACE8F00A94910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BB8479722C2958800C21C64 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		7BB8479922C295AC00C21C64 /* libusb-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libusb-1.0.0.dylib"; path = "../../../../../usr/local/Cellar/libusb/1.0.22/lib/libusb-1.0.0.dylib"; sourceTree = "<group>"; };
-		7BB8479C22C345D100C21C64 /* runner */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = runner; path = archiver/target/release/runner; sourceTree = "<group>"; };
+		7BB8479C22C345D100C21C64 /* runner */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = runner; path = stokepile/target/release/runner; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,9 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				7BB8479C22C345D100C21C64 /* runner */,
-				7BAF921A22BACE8F00A94910 /* archiver-runner */,
-				7BAF922B22BACE8F00A94910 /* archiver-runnerTests */,
-				7BAF923622BACE8F00A94910 /* archiver-runnerUITests */,
+				7BAF921A22BACE8F00A94910 /* stokepile-runner */,
+				7BAF922B22BACE8F00A94910 /* stokepile-runnerTests */,
+				7BAF923622BACE8F00A94910 /* stokepile-runnerUITests */,
 				7BAF921922BACE8F00A94910 /* Products */,
 				7BB8479622C2958800C21C64 /* Frameworks */,
 			);
@@ -95,41 +95,41 @@
 		7BAF921922BACE8F00A94910 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7BAF921822BACE8F00A94910 /* archiver-runner.app */,
-				7BAF922822BACE8F00A94910 /* archiver-runnerTests.xctest */,
-				7BAF923322BACE8F00A94910 /* archiver-runnerUITests.xctest */,
+				7BAF921822BACE8F00A94910 /* stokepile-runner.app */,
+				7BAF922822BACE8F00A94910 /* stokepile-runnerTests.xctest */,
+				7BAF923322BACE8F00A94910 /* stokepile-runnerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7BAF921A22BACE8F00A94910 /* archiver-runner */ = {
+		7BAF921A22BACE8F00A94910 /* stokepile-runner */ = {
 			isa = PBXGroup;
 			children = (
 				7BAF921B22BACE8F00A94910 /* AppDelegate.swift */,
 				7BAF921D22BACE8F00A94910 /* Assets.xcassets */,
 				7BAF921F22BACE8F00A94910 /* MainMenu.xib */,
 				7BAF922222BACE8F00A94910 /* Info.plist */,
-				7BAF922322BACE8F00A94910 /* archiver_runner.entitlements */,
+				7BAF922322BACE8F00A94910 /* stokepile_runner.entitlements */,
 			);
-			path = "archiver-runner";
+			path = "stokepile-runner";
 			sourceTree = "<group>";
 		};
-		7BAF922B22BACE8F00A94910 /* archiver-runnerTests */ = {
+		7BAF922B22BACE8F00A94910 /* stokepile-runnerTests */ = {
 			isa = PBXGroup;
 			children = (
-				7BAF922C22BACE8F00A94910 /* archiver_runnerTests.swift */,
+				7BAF922C22BACE8F00A94910 /* stokepile_runnerTests.swift */,
 				7BAF922E22BACE8F00A94910 /* Info.plist */,
 			);
-			path = "archiver-runnerTests";
+			path = "stokepile-runnerTests";
 			sourceTree = "<group>";
 		};
-		7BAF923622BACE8F00A94910 /* archiver-runnerUITests */ = {
+		7BAF923622BACE8F00A94910 /* stokepile-runnerUITests */ = {
 			isa = PBXGroup;
 			children = (
-				7BAF923722BACE8F00A94910 /* archiver_runnerUITests.swift */,
+				7BAF923722BACE8F00A94910 /* stokepile_runnerUITests.swift */,
 				7BAF923922BACE8F00A94910 /* Info.plist */,
 			);
-			path = "archiver-runnerUITests";
+			path = "stokepile-runnerUITests";
 			sourceTree = "<group>";
 		};
 		7BB8479622C2958800C21C64 /* Frameworks */ = {
@@ -144,27 +144,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7BAF921722BACE8F00A94910 /* archiver-runner */ = {
+		7BAF921722BACE8F00A94910 /* stokepile-runner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7BAF923C22BACE8F00A94910 /* Build configuration list for PBXNativeTarget "archiver-runner" */;
+			buildConfigurationList = 7BAF923C22BACE8F00A94910 /* Build configuration list for PBXNativeTarget "stokepile-runner" */;
 			buildPhases = (
 				7BAF921422BACE8F00A94910 /* Sources */,
 				7BAF921522BACE8F00A94910 /* Frameworks */,
-				7BB8479522C1D34F00C21C64 /* Build archiver */,
+				7BB8479522C1D34F00C21C64 /* Build stokepile */,
 				7BAF921622BACE8F00A94910 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "archiver-runner";
-			productName = "archiver-runner";
-			productReference = 7BAF921822BACE8F00A94910 /* archiver-runner.app */;
+			name = "stokepile-runner";
+			productName = "stokepile-runner";
+			productReference = 7BAF921822BACE8F00A94910 /* stokepile-runner.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7BAF922722BACE8F00A94910 /* archiver-runnerTests */ = {
+		7BAF922722BACE8F00A94910 /* stokepile-runnerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7BAF923F22BACE8F00A94910 /* Build configuration list for PBXNativeTarget "archiver-runnerTests" */;
+			buildConfigurationList = 7BAF923F22BACE8F00A94910 /* Build configuration list for PBXNativeTarget "stokepile-runnerTests" */;
 			buildPhases = (
 				7BAF922422BACE8F00A94910 /* Sources */,
 				7BAF922522BACE8F00A94910 /* Frameworks */,
@@ -175,14 +175,14 @@
 			dependencies = (
 				7BAF922A22BACE8F00A94910 /* PBXTargetDependency */,
 			);
-			name = "archiver-runnerTests";
-			productName = "archiver-runnerTests";
-			productReference = 7BAF922822BACE8F00A94910 /* archiver-runnerTests.xctest */;
+			name = "stokepile-runnerTests";
+			productName = "stokepile-runnerTests";
+			productReference = 7BAF922822BACE8F00A94910 /* stokepile-runnerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7BAF923222BACE8F00A94910 /* archiver-runnerUITests */ = {
+		7BAF923222BACE8F00A94910 /* stokepile-runnerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7BAF924222BACE8F00A94910 /* Build configuration list for PBXNativeTarget "archiver-runnerUITests" */;
+			buildConfigurationList = 7BAF924222BACE8F00A94910 /* Build configuration list for PBXNativeTarget "stokepile-runnerUITests" */;
 			buildPhases = (
 				7BAF922F22BACE8F00A94910 /* Sources */,
 				7BAF923022BACE8F00A94910 /* Frameworks */,
@@ -193,9 +193,9 @@
 			dependencies = (
 				7BAF923522BACE8F00A94910 /* PBXTargetDependency */,
 			);
-			name = "archiver-runnerUITests";
-			productName = "archiver-runnerUITests";
-			productReference = 7BAF923322BACE8F00A94910 /* archiver-runnerUITests.xctest */;
+			name = "stokepile-runnerUITests";
+			productName = "stokepile-runnerUITests";
+			productReference = 7BAF923322BACE8F00A94910 /* stokepile-runnerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -221,7 +221,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7BAF921322BACE8F00A94910 /* Build configuration list for PBXProject "archiver-runner" */;
+			buildConfigurationList = 7BAF921322BACE8F00A94910 /* Build configuration list for PBXProject "stokepile-runner" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -234,9 +234,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7BAF921722BACE8F00A94910 /* archiver-runner */,
-				7BAF922722BACE8F00A94910 /* archiver-runnerTests */,
-				7BAF923222BACE8F00A94910 /* archiver-runnerUITests */,
+				7BAF921722BACE8F00A94910 /* stokepile-runner */,
+				7BAF922722BACE8F00A94910 /* stokepile-runnerTests */,
+				7BAF923222BACE8F00A94910 /* stokepile-runnerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -270,7 +270,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7BB8479522C1D34F00C21C64 /* Build archiver */ = {
+		7BB8479522C1D34F00C21C64 /* Build stokepile */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -279,15 +279,15 @@
 			);
 			inputPaths = (
 			);
-			name = "Build archiver";
+			name = "Build stokepile";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/target/release/archiver-0.1.0",
+				"$(DERIVED_FILE_DIR)/target/release/stokepile-0.1.0",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "LIBUSB_PATH=\"/usr/local/opt/libusb/lib/libusb-1.0.0.dylib\"\n\nif [ ! -d archiver ]; then\n    git clone git://github.com/richo/archiver.git\nfi\nif [ ! -f $LIBUSB_PATH ]; then\n    echo \"error: Build system requires libusb. try `brew install libusb`\"\n    exit 1\nfi\n\ncd archiver\ngit fetch\ngit merge --ff-only origin/master\n/Users/${USER}/.cargo/bin/cargo build --release\n";
+			shellScript = "LIBUSB_PATH=\"/usr/local/opt/libusb/lib/libusb-1.0.0.dylib\"\n\nif [ ! -d stokepile ]; then\n    git clone git://github.com/richo/stokepile.git\nfi\nif [ ! -f $LIBUSB_PATH ]; then\n    echo \"error: Build system requires libusb. try `brew install libusb`\"\n    exit 1\nfi\n\ncd stokepile\ngit fetch\ngit merge --ff-only origin/master\n/Users/${USER}/.cargo/bin/cargo build --release\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -304,7 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BAF922D22BACE8F00A94910 /* archiver_runnerTests.swift in Sources */,
+				7BAF922D22BACE8F00A94910 /* stokepile_runnerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BAF923822BACE8F00A94910 /* archiver_runnerUITests.swift in Sources */,
+				7BAF923822BACE8F00A94910 /* stokepile_runnerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,12 +321,12 @@
 /* Begin PBXTargetDependency section */
 		7BAF922A22BACE8F00A94910 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7BAF921722BACE8F00A94910 /* archiver-runner */;
+			target = 7BAF921722BACE8F00A94910 /* stokepile-runner */;
 			targetProxy = 7BAF922922BACE8F00A94910 /* PBXContainerItemProxy */;
 		};
 		7BAF923522BACE8F00A94910 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7BAF921722BACE8F00A94910 /* archiver-runner */;
+			target = 7BAF921722BACE8F00A94910 /* stokepile-runner */;
 			targetProxy = 7BAF923422BACE8F00A94910 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -462,11 +462,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "archiver-runner/archiver_runner.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "stokepile-runner/stokepile_runner.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = S93SSHN8SD;
-				INFOPLIST_FILE = "archiver-runner/Info.plist";
+				INFOPLIST_FILE = "stokepile-runner/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -475,7 +475,7 @@
 					"$(inherited)",
 					/usr/local/Cellar/libusb/1.0.22/lib,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "psych0tik.net.archiver-runner";
+				PRODUCT_BUNDLE_IDENTIFIER = "psych0tik.net.stokepile-runner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -485,11 +485,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "archiver-runner/archiver_runner.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "stokepile-runner/stokepile_runner.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = S93SSHN8SD;
-				INFOPLIST_FILE = "archiver-runner/Info.plist";
+				INFOPLIST_FILE = "stokepile-runner/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -498,7 +498,7 @@
 					"$(inherited)",
 					/usr/local/Cellar/libusb/1.0.22/lib,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "psych0tik.net.archiver-runner";
+				PRODUCT_BUNDLE_IDENTIFIER = "psych0tik.net.stokepile-runner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -512,16 +512,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = S93SSHN8SD;
-				INFOPLIST_FILE = "archiver-runnerTests/Info.plist";
+				INFOPLIST_FILE = "stokepile-runnerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "psych0tik.net.archiver-runnerTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "psych0tik.net.stokepile-runnerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/archiver-runner.app/Contents/MacOS/archiver-runner";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stokepile-runner.app/Contents/MacOS/stokepile-runner";
 			};
 			name = Debug;
 		};
@@ -533,16 +533,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = S93SSHN8SD;
-				INFOPLIST_FILE = "archiver-runnerTests/Info.plist";
+				INFOPLIST_FILE = "stokepile-runnerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "psych0tik.net.archiver-runnerTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "psych0tik.net.stokepile-runnerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/archiver-runner.app/Contents/MacOS/archiver-runner";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stokepile-runner.app/Contents/MacOS/stokepile-runner";
 			};
 			name = Release;
 		};
@@ -553,16 +553,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = S93SSHN8SD;
-				INFOPLIST_FILE = "archiver-runnerUITests/Info.plist";
+				INFOPLIST_FILE = "stokepile-runnerUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "psych0tik.net.archiver-runnerUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "psych0tik.net.stokepile-runnerUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "archiver-runner";
+				TEST_TARGET_NAME = "stokepile-runner";
 			};
 			name = Debug;
 		};
@@ -573,23 +573,23 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = S93SSHN8SD;
-				INFOPLIST_FILE = "archiver-runnerUITests/Info.plist";
+				INFOPLIST_FILE = "stokepile-runnerUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "psych0tik.net.archiver-runnerUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "psych0tik.net.stokepile-runnerUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "archiver-runner";
+				TEST_TARGET_NAME = "stokepile-runner";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7BAF921322BACE8F00A94910 /* Build configuration list for PBXProject "archiver-runner" */ = {
+		7BAF921322BACE8F00A94910 /* Build configuration list for PBXProject "stokepile-runner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7BAF923A22BACE8F00A94910 /* Debug */,
@@ -598,7 +598,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7BAF923C22BACE8F00A94910 /* Build configuration list for PBXNativeTarget "archiver-runner" */ = {
+		7BAF923C22BACE8F00A94910 /* Build configuration list for PBXNativeTarget "stokepile-runner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7BAF923D22BACE8F00A94910 /* Debug */,
@@ -607,7 +607,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7BAF923F22BACE8F00A94910 /* Build configuration list for PBXNativeTarget "archiver-runnerTests" */ = {
+		7BAF923F22BACE8F00A94910 /* Build configuration list for PBXNativeTarget "stokepile-runnerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7BAF924022BACE8F00A94910 /* Debug */,
@@ -616,7 +616,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7BAF924222BACE8F00A94910 /* Build configuration list for PBXNativeTarget "archiver-runnerUITests" */ = {
+		7BAF924222BACE8F00A94910 /* Build configuration list for PBXNativeTarget "stokepile-runnerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7BAF924322BACE8F00A94910 /* Debug */,

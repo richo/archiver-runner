@@ -1,15 +1,15 @@
 //
-//  archiver_runnerTests.swift
-//  archiver-runnerTests
+//  stokepile_runnerTests.swift
+//  stokepile-runnerTests
 //
 //  Created by richö butts on 6/19/19.
 //  Copyright © 2019 richö butts. All rights reserved.
 //
 
 import XCTest
-@testable import archiver_runner
+@testable import stokepile_runner
 
-class archiver_runnerTests: XCTestCase {
+class stokepile_runnerTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
