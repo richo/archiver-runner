@@ -287,7 +287,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "ARCHIVER_VERSION=\"0.1.0\"\nLIBUSB_PATH=\"/usr/local/opt/libusb/lib/libusb-1.0.0.dylib\"\n\nls\n\nif [ ! -d archiver ]; then\n    git clone git://github.com/richo/archiver.git\nfi\nif [ ! -f $LIBUSB_PATH ]; then\n    echo \"error: Build system requires libusb. try `brew install libusb`\"\n    exit 1\nfi\n\ncd archiver\ngit fetch\ngit merge --ff-only origin/master\n/Users/${USER}/.cargo/bin/cargo build --release\n";
+			shellScript = "LIBUSB_PATH=\"/usr/local/opt/libusb/lib/libusb-1.0.0.dylib\"\n\nif [ ! -d archiver ]; then\n    git clone git://github.com/richo/archiver.git\nfi\nif [ ! -f $LIBUSB_PATH ]; then\n    echo \"error: Build system requires libusb. try `brew install libusb`\"\n    exit 1\nfi\n\ncd archiver\ngit fetch\ngit merge --ff-only origin/master\n/Users/${USER}/.cargo/bin/cargo build --release\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

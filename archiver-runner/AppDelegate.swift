@@ -111,6 +111,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSLog("Started")
         self.aggregatedOutput = NSMutableAttributedString.init()
         appendOutput(output: "Started archiver ui!\n")
+        appendOutput(output: "archiver version: ")
+        appendOutput(output: getArchiverVersion())
+        appendOutput(output: "\n")
+
         // self.textOutput?.textStorage?.defaultParagraphStyle.default
     }
 
@@ -153,6 +157,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
         self.state = state
+    }
+    
+    func getArchiverVersion() -> String {
+        let task = Process()
+        task.executableURL = executableURL
+        task.arguments = ["--version"]
+        
+        let stdout = Pipe()
+        
+        task.standardOutput = stdout
+        do {
+            try task.run()
+        } catch {
+            return "Couldn't run archiver to fetch version"
+        }
+        task.waitUntilExit()
+        
+        let data = stdout.fileHandleForReading.readDataToEndOfFile()
+        let output = String(decoding: data, as: UTF8.self)
+        return output
     }
 }
 
